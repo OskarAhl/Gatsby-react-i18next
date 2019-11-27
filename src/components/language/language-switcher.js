@@ -5,15 +5,9 @@ import language_config from "../../../language-config"
 const languages = Object.keys(language_config)
 
 class LanguageSwitcher extends Component {
-  constructor(props) {
-    super(props)
-    const { language } = props
-    this.state = { language: language }
-  }
-
   handleSelect = e => {
     const selected_language = e.target.value
-    const { language: current_language } = this.state
+    const { language: current_language } = this.props
     const path = language_config[selected_language].is_default
       ? "/"
       : `/${selected_language}`
@@ -25,7 +19,7 @@ class LanguageSwitcher extends Component {
     return (
       <select
         name="languages"
-        value={this.state.language}
+        value={this.props.language}
         onChange={this.handleSelect}
       >
         {languages.map(lang => (
