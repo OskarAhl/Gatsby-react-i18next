@@ -7,7 +7,7 @@
   "dependencies": {
     "crc-32": "^1.2.0",
     "crc32": "^0.2.2",
-    "gatsby": "^2.17.11",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.31",
     "gatsby-plugin-manifest": "^2.2.27",
     "gatsby-plugin-offline": "^3.0.19",
